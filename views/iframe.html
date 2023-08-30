@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        iframe {
+            width: 100vw;
+            height: 50vh;
+        }
+    </style>
+
+</head>
+<body>
+    <iframe src="https://infosec-nxwv.onrender.com/" frameborder="0"></iframe>
+    <div style="display: flex; flex-direction: row; gap: 10px; margin: 0 30vw;">
+        <label for="contrasenia">Ingrese contraseña:</label>
+        <input type="password" onchange="atrapado()" id="contrasenia"/>
+    </div>
+</body>
+</html>
+<script>
+    const atrapado = () => {
+        let contrasena = document.getElementById("contrasenia").value;
+        console.table(contrasena);
+        alert(contrasena);
+    }
+</script>
