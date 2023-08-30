@@ -10,7 +10,7 @@ app.use(express.static('public'));
 //Middleware
 app.use(helmet.hidePoweredBy());
 //Evitar que utilicen nuestro página en un iframe
-api.use(helmet.frameguard({action: "DENY"}));
+app.use(helmet.frameguard({action: "DENY"}));
 
 app.disable('strict-transport-security');
 
