@@ -14,7 +14,10 @@ app.use(
   helmet.frameguard({
     action: "deny",
   }),
-  helmet.xssFilter()
+  //Evitar el Cross-site scripting (XSS)
+  helmet.xssFilter(),
+  //Evitar MIME sniffing
+  helmet.noSniff()
 );
 
 app.disable('strict-transport-security');
