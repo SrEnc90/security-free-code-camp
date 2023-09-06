@@ -17,7 +17,9 @@ app.use(
   //Evitar el Cross-site scripting (XSS)
   helmet.xssFilter(),
   //Evitar MIME sniffing
-  helmet.noSniff()
+  helmet.noSniff(),
+  //Evitar untrusted HTML
+  helmet.ieNoOpen()
 );
 
 app.disable('strict-transport-security');
